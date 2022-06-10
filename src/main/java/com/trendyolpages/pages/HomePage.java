@@ -1,12 +1,11 @@
 package com.trendyolpages.pages;
 
 
-import com.denemebase.commons.CommonsBasePage;
+import com.trendyolbase.commons.CommonsBasePage;
 import com.trendyolbase.basepages.ServicesBase;
 import com.trendyolbase.data.GetData.Url;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
-import org.apache.http.protocol.HTTP;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import java.io.IOException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +85,7 @@ public class HomePage extends BasePage {
 
 
 
-	public HomePage linkControl() throws IOException {
+	public HomePage linkControl()  {
 		List<String[]> dataLines = new ArrayList<>();
 		ServicesBase services=new ServicesBase();
 		List<WebElement> butikLink=lib.findElements(By.xpath("//a[contains(@href,'boutique')]"));

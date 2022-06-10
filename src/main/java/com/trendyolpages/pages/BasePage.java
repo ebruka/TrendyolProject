@@ -1,6 +1,6 @@
 package com.trendyolpages.pages;
 
-import com.denemebase.commons.CommonsBasePage;
+import com.trendyolbase.commons.CommonsBasePage;
 import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
