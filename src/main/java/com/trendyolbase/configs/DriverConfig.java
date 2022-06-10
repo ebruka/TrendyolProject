@@ -1,4 +1,4 @@
-package com.denemebase.configs;
+package com.trendyolbase.configs;
 
 import com.trendyolbase.utility.Log;
 import com.fasterxml.jackson.databind.ObjectMapper;

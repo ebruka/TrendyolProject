@@ -1,7 +1,7 @@
 package com.trendyolbase.base;
 
 
-import com.denemebase.configs.DriverConfig;
+import com.trendyolbase.configs.DriverConfig;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
