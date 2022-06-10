@@ -1,7 +1,7 @@
 package Web;
 import com.denemebase.controller.TestController;
 import com.trendyolpages.pages.HomePage;
-import jdk.jfr.Description;
+import io.qameta.allure.Description;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

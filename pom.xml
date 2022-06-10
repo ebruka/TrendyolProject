@@ -19,7 +19,9 @@
 		<log4j-version>2.14.1</log4j-version>
 		<maven-surefire-plugin-version>3.0.0-M5</maven-surefire-plugin-version>
 		<ashot-version>1.5.4</ashot-version>
-		<maven-surefire-suiteXmlFile>testng.xml</maven-surefire-suiteXmlFile>
+		<maven-surefire-suiteXmlFile>UItestng.xml</maven-surefire-suiteXmlFile>
+
+
 
 	</properties>
 
