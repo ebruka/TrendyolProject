@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ebrukaya_hepsiburada" />
+        <module name="Trendyol" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ebrukaya_hepsiburada" target="1.8" />
+      <module name="Trendyol" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,7 +2,11 @@ package com.trendyolpages.pages;
 
 
 import com.denemebase.commons.CommonsBasePage;
+import com.trendyolbase.basepages.ServicesBase;
 import com.trendyolbase.data.GetData.Url;
+import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
+import org.apache.http.protocol.HTTP;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -85,15 +89,14 @@ public class HomePage extends BasePage {
 
 	public HomePage linkControl() throws IOException {
 		List<String[]> dataLines = new ArrayList<>();
+		ServicesBase services=new ServicesBase();
 		List<WebElement> butikLink=lib.findElements(By.xpath("//a[contains(@href,'boutique')]"));
 		int linkSayisi=butikLink.size();
 
 		for (int i = 0; i < linkSayisi; i++) {
 			String url=	butikLink.get(i).getAttribute("href");
-			String urlControl= lib.brokenUrlControl(url);
-			dataLines.add(new String[] {urlControl});
-
-
+		    Response response=services.getRequest(url,"", HttpStatus.SC_OK);
+			dataLines.add(new String[] {"URL Bilgisi:" + " " + url,"Status Kodu:" + "" +Integer.toString(response.getStatusCode()),"Response Time:" + " " +Long.toString(response.getTime())});
 			}
 
              lib.writeCSV(dataLines,"csvdata");

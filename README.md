@@ -1,4 +1,4 @@
-HEPSIBURADA PROJECT
+TRENDYOL PROJECT
 
 * BUG kayıtları, test senaryoları ve analiz ile ilgili çalışmalar projenin içine eklenmiştir.
 
