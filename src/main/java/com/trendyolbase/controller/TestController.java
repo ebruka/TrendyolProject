@@ -2,7 +2,7 @@ package com.denemebase.controller;
 
 import com.trendyolbase.utility.Driver;
 import com.trendyolbase.utility.Terminal;
-import com.trendyolbase.utility.TestListeners;
+
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
-@Listeners({TestListeners.class})
+@Listeners({com.enuygun.utility.TestListeners.class})
 public class TestController {
 
     public <T> T startTest(T page){
