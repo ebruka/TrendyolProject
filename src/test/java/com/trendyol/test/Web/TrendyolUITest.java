@@ -14,7 +14,7 @@ public class TrendyolUITest extends TestController {
     @Description("Butik link statüs kodu ve response timelara bakılması.")
     @Test
     @Parameters("browser")
-    public void linkBroken(@Optional("chrome") String browser) throws IOException {
+    public void ButikLinkKontrol(@Optional("chrome") String browser) throws IOException {
         startTest(new HomePage(getDriver(browser)))
                 .anaSayfayaGit().linkControl();
 
