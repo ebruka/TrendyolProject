@@ -7,6 +7,7 @@ import com.trendyolbase.data.GetData.Url;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -101,6 +102,34 @@ public class HomePage extends BasePage {
 
 		return this;
 	}
+
+
+
+
+	public HomePage butikImagelinkControl()  {
+		List<String[]> dataLines = new ArrayList<>();
+		ServicesBase services=new ServicesBase();
+		JavascriptExecutor js = (JavascriptExecutor) lib.driver;
+		//Scroll down till the bottom of the page
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+		List<WebElement> butikLink=lib.findElements(By.xpath("//*[@class='image-container']//img"));
+		int linkSayisi=butikLink.size();
+
+		for (int i = 0; i < linkSayisi; i++) {
+			String url=	butikLink.get(i).getAttribute("src");
+			Response response=services.getRequest(url,"", HttpStatus.SC_OK);
+			dataLines.add(new String[] {"URL Bilgisi:" + " " + url,"Status Kodu:" + "" +Integer.toString(response.getStatusCode()),"Response Time:" + " " +Long.toString(response.getTime())});
+		}
+
+		lib.writeCSV(dataLines,"csvdata");
+
+		return this;
+	}
+
+
+
+
 
 
 	public HomePage anaSayfayaGit() {

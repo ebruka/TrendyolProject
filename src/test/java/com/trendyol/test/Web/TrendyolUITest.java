@@ -16,7 +16,18 @@ public class TrendyolUITest extends TestController {
     @Parameters("browser")
     public void ButikLinkKontrol(@Optional("chrome") String browser) throws IOException {
         startTest(new HomePage(getDriver(browser)))
-                .anaSayfayaGit().linkControl();
+                .anaSayfayaGit()
+                .linkControl();
+
+    }
+
+    @Description("Butik image link statüs kodu ve response timelara bakılması.")
+    @Test
+    @Parameters("browser")
+    public void ButikImageLinkKontrol(@Optional("chrome") String browser) throws IOException {
+        startTest(new HomePage(getDriver(browser)))
+                .anaSayfayaGit()
+                .butikImagelinkControl();
 
     }
 

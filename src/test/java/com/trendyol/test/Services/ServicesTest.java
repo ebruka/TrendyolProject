@@ -11,7 +11,7 @@ public class ServicesTest extends TestController {
 
 
   @Step("Get Book API status")
-  @Test
+  @Test(priority = 0)
   public void getAPIStatus() {
 
     hs.getApiStatus();
@@ -19,7 +19,7 @@ public class ServicesTest extends TestController {
   }
 
     @Step("Get All Books")
-    @Test
+    @Test(priority =1 )
     public void gelAllBooks() {
 
         hs.getAllBook();
