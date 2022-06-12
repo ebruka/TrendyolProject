@@ -1,6 +1,6 @@
 package com.trendyol.test.Services;
 
-import com.denemebase.controller.TestController;
+import com.trendyolbase.controller.TestController;
 import com.trendyolpages.service.trendyolServices;
 import io.qameta.allure.Step;
 import org.testng.annotations.Test;

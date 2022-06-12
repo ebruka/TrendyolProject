@@ -1,4 +1,4 @@
-package com.denemebase.controller;
+package com.trendyolbase.controller;
 
 import com.trendyolbase.utility.Driver;
 import com.trendyolbase.utility.Terminal;

@@ -1,5 +1,5 @@
 package com.trendyol.test.Web;
-import com.denemebase.controller.TestController;
+import com.trendyolbase.controller.TestController;
 import com.trendyolpages.pages.HomePage;
 import io.qameta.allure.Description;
 import org.testng.annotations.Optional;
