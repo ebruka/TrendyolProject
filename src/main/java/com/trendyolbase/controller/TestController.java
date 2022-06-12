@@ -2,15 +2,16 @@ package com.trendyolbase.controller;
 
 import com.trendyolbase.utility.Driver;
 import com.trendyolbase.utility.Terminal;
-
-import io.qameta.allure.Step;
+import com.trendyolbase.utility.TestListeners;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 
-@Listeners({com.enuygun.utility.TestListeners.class})
+import io.qameta.allure.Step;
+
+@Listeners({TestListeners.class})
 public class TestController {
 
     public <T> T startTest(T page){
@@ -39,5 +40,5 @@ public class TestController {
     @AfterSuite(alwaysRun = true)
     public void openAllureReport() {
         Terminal.runCommand("allure serve -h localhost");
-    }    
+    }
 }

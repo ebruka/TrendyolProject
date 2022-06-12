@@ -4,6 +4,7 @@ package com.trendyolpages.pages;
 import com.trendyolbase.commons.CommonsBasePage;
 import com.trendyolbase.basepages.ServicesBase;
 import com.trendyolbase.data.GetData.Url;
+import com.trendyolbase.utility.Log;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.openqa.selenium.By;
@@ -165,7 +166,7 @@ public class HomePage extends BasePage {
 	public HomePage googleGirisi() {
         lib.click(btnGirisYap);
 		lib.click(btnLoginGoogle);
-		lib.Control(lib.isElementExist(btnGoogleBaskaHesap),"Google login sayfasına yönlendirildi...","Google login sayfasına yönlendirilirken hata alindi...");
+		lib.Control(lib.isElementExist(txtGoogleEmail),"Google login sayfasına yönlendirildi...","Google login sayfasına yönlendirilirken hata alindi...");
 		lib.click(btnGoogleBaskaHesap);
 		return this;
 	}
@@ -174,7 +175,6 @@ public class HomePage extends BasePage {
 	public HomePage controlWarningMessage() {
 
 		lib.Control(lib.isElementExist(textWarningMessage),textWarningMessage.getText(),"Login işlemi yapılırken hata mesajı kontrolü yapilamadi..");
-
 		return this;
 	}
 

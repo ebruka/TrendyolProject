@@ -1,7 +1,5 @@
-package com.enuygun.utility;
+package com.trendyolbase.utility;
 
-import com.trendyolbase.utility.Driver;
-import com.trendyolbase.utility.Log;
 import io.qameta.allure.Attachment;
 
 import org.testng.ITestContext;
