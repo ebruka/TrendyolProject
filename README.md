@@ -2,7 +2,7 @@ TRENDYOL PROJECT
 
 * Test otomasyonunda Java+Selenium+TestNG kullanılmıştır.
 
-* Kodlar sonalint analizden geçirilmiştir.
+* Kodlar sonarlint analizden geçirilmiştir.
 
 * Services ve Web testleri için iki ayrı test classı oluşturulmuştur.
 
@@ -10,6 +10,9 @@ TRENDYOL PROJECT
 
 * Raporlamalar için allure report kullanılmıştır.
 
-* Rapor çıktıları testresultscreeshot klasörünün altındadır.
+* Rapor çıktıları ScreenShot klasörünün altındadır.
 
-* Docker üzerinden testleri çalıştırmak için start.sh dosyasının çalıştırılması yeterlidir.
+* Docker üzerinden testleri çalıştırmak için starter.sh dosyasının çalıştırılması yeterlidir.
+
+* UI testlerinde yer alan başarılı login girişi datası bilgi güvenliğinden dolayı silinmiştir.
+Dışardan paramemetre girilerek çalıştırılabilir.

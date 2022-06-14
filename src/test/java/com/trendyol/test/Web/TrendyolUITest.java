@@ -37,7 +37,7 @@ public class TrendyolUITest extends TestController {
     public void BasariliUyeGirisi(@Optional("chrome") String browser) {
         startTest(new HomePage(getDriver(browser)))
                 .anaSayfayaGit()
-                .uyeGirisiYap("e_ebru15@hotmail.com", "Ebka1990");
+                .uyeGirisiYap("", "");
     }
 
     @Description("Hatali şifre  girişi yapıldığında doğru hata mesajının alındığının görülmesi.")
